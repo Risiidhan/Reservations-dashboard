@@ -1,12 +1,7 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 
-const Page = () => {
-  const [user, setUser] = useState();
-
-  useEffect(() => {
-    if (!user) return;
-    // will error
-  }, [user]);
-
-  return <h1>Hello</h1>;
+const page = () => {
+  return <div>test</div>;
 };
+
+export default page;
