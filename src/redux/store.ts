@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
+// Dummy reducer (no-op)
+const dummyReducer = (state = {}, action: any) => state;
 export const store = configureStore({
   reducer: {
     // Add slices here
+    dummy: dummyReducer,
   },
 });
 
