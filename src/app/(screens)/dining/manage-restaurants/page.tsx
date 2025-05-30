@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Page = () => {
-  return (
-    <div>
-      manage-restaurant Page
-    </div>
-  )
-}
+const page = () => {
+  return <div>manage-restaurant page</div>;
+};
 
-export default Page
+export default page;

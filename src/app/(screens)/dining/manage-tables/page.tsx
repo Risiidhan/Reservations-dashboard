@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const Page = () => {
-  return (
-    <div>
-      manage tables
-    </div>
-  )
-}
+const page = () => {
+  return <div>manage tables</div>;
+};
 
-export default Page
+export default page;

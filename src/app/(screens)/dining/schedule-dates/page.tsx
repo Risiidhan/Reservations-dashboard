@@ -1,12 +1,7 @@
-    
-import React from 'react'
+import React from 'react';
 
-const Page = () => {
-  return (
-    <div>
-      dates
-    </div>
-  )
-}
+const page = () => {
+  return <div>dates</div>;
+};
 
-export default Page
+export default page;
