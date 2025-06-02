@@ -5,7 +5,7 @@ import '../style.css';
 const ProfileComponent = ({children}: {children : React.ReactNode}) => {
    return(
      <div className='right-panel-container-btn'>
-           {children}
+         {children}
     </div>
    )
 

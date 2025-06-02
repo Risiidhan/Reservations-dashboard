@@ -1,13 +1,13 @@
 import React from 'react';
-import NotificationComponent from "./NotificationComponent"
-import AlertComponent from './AlertComponent';
 import ProfileComponent from './ProfileComponent';
+import IconBadgeContainer from './IconBadgeContainer';
+import { BadgeType } from '@/enum/BadgeType';
 
 const RightPanelComponent = () => {
   return (
     <div className='flex gap-[10px]'>
-      <NotificationComponent>😀</NotificationComponent>
-      <AlertComponent>😀</AlertComponent>
+      <IconBadgeContainer badgeType={BadgeType.Alert} />
+      <IconBadgeContainer badgeType={BadgeType.Notification} />
       <ProfileComponent>😀</ProfileComponent>
     </div>
   )
