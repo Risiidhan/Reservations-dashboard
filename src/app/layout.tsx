@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderComponent from "@/layouts/header/HeaderComponent";
+import { SidemenuComponent } from "@/layouts/sidemenu/SidemenuComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,13 +25,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+  <html lang="en">
+  <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F8F9FF]`}>
+    <div className="flex flex-col min-h-screen">
       <HeaderComponent />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F8F9FF]`}
-      >
-        {children}
-      </body>
-    </html>
+      <div className="flex flex-1">
+        <SidemenuComponent />
+        <main className="flex-1 p-4 overflow-auto">{children}</main>
+      </div>
+    </div>
+  </body>
+</html>
   );
 }
