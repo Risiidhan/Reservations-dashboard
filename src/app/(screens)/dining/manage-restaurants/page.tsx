@@ -1,11 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   return (
     <div>
-      manage-restaurant page
+      manage-restaurant Page
     </div>
   )
 }
 
-export default page
+export default Page
