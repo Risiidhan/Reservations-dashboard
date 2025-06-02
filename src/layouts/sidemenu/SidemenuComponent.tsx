@@ -48,7 +48,7 @@ const renderMenu = (menu: { title: string; submenu?: { title: string }[] }) => {
             <Button
               key={index}
               variant="ghost"
-              className="w-full justify-start cursor-pointer font-normal hover:bg-[#EDE7FF] text-[14px]"
+              className="w-full justify-start cursor-pointer font-normal capitalize hover:bg-[#EDE7FF] text-[14px]"
             >
               {subItem.title}
             </Button>
@@ -60,7 +60,7 @@ const renderMenu = (menu: { title: string; submenu?: { title: string }[] }) => {
 
   return (
     <Button variant="ghost"
-      className="w-full hover:bg-[#EDE7FF] cursor-pointer justify-start text-[15px] font-normal">
+      className="w-full hover:bg-[#EDE7FF] cursor-pointer capitalize justify-start text-[15px] font-normal">
       {menu.title}
     </Button>
   );
@@ -73,7 +73,7 @@ export const SidemenuComponent = () => {
       <nav className="space-y-4">
         {sidebarContent.map((item, index) => (
           <div key={index} className="border-b border-[#A6B4DA] pb-4">
-            <p className="text-sm font-medium text-gray-700 mb-2 capitalize">
+            <p className="text-sm font-medium text-gray-700 mb-2 uppercase">
               {item.title}
             </p>
            {renderMenu(item.menu)}
