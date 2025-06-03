@@ -58,9 +58,8 @@ if (!menu.submenu) {
       return (
     <Button
       variant="ghost"
-      className="w-full justify-start text-[15px] font-normal hover:bg-[#EDE7FF]"
-    >
-      <div className="flex items-center gap-2">
+      className="w-full justify-start text-[15px] hover:bg-[#EDE7FF]">
+      <div className="flex items-center text-[#525D6F] gap-2 font-medium">
         {menu.icon}
         {menu.title}
       </div>
@@ -74,24 +73,30 @@ if (!menu.submenu) {
             variant="ghost"
             className="group w-full hover:bg-[#EDE7FF] justify-between text-[15px] font-normal"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center text-[#525D6F] font-medium gap-2">
               {menu.icon}
               {menu.title}
             </div>
             <ChevronRight className="h-4 w-4 transition-transform group-data-[state=open]:rotate-90" />
           </Button>
         </CollapsibleTrigger>
-        <CollapsibleContent className="pl-4 space-y-1 mt-2">
-          {menu.submenu.map((subItem, index) => (
+      <CollapsibleContent className="relative mt-2 pl-6">
+        {/* vertical line */}
+        <div className="absolute top-[-1rem] h-full w-px bg-[#A084E8]" />
+
+        {menu.submenu.map((subItem, index) => (
+          <div key={index} className="relative flex items-center group">
+            {/* horizontal branch line */}
+            <span className="absolute top-1/2 h-px w-4 bg-[#A084E8]" />
             <Button
-              key={index}
               variant="ghost"
-              className="w-full justify-start font-normal text-[14px]"
-            >
+              className={`relative left-[1rem] justify-start font-medium w-[90%] hover:bg-[#EDE7FF] cursor-pointer text-[14px] pl-2 
+                  ${ index === 0 ? 'text-[#7A29FA]' : 'text-[#687181]'}`}>
               {subItem.title}
             </Button>
-          ))}
-        </CollapsibleContent>
+          </div>
+        ))}
+      </CollapsibleContent>
       </Collapsible>
     );
 };
@@ -103,7 +108,7 @@ export const SidemenuComponent = () => {
       <nav className="space-y-4">
         {sidebarContent.map((item, index) => (
           <div key={index} className="border-b border-[#A6B4DA] pb-4">
-            <p className="text-sm font-medium text-gray-700 mb-2 uppercase">
+            <p className="text-[15.25px] pl-[16px] font-bold text-[#53637C] mb-4 uppercase">
               {item.title}
             </p>
            {renderMenu(item.menu)}

@@ -127,7 +127,7 @@
 }
 
 .sidebar-width {
-    width: 20%;
+    flex-basis: 20%;
     max-width: 300px;
     min-width: 250px;
 }
