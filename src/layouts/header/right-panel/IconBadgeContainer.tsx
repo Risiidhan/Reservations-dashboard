@@ -1,22 +1,21 @@
-import { BadgeType } from '@/enum/BadgeType';
+import { BadgeType } from '../../../../types/enum/BadgeType';
 import React from 'react'
+import NotificationSvg from '../svg/NotificationSvg';
+import AlertSvg from '../svg/AlertSvg';
 
-const IconBadgeContainer = ({badgeType}: {badgeType: BadgeType}) => {
+const a = {
+  [BadgeType.Alert]: <AlertSvg />,
+  [BadgeType.Notification]: <NotificationSvg />
+}
 
-  const renderIcon = () => {
-    switch (badgeType) {
-      case BadgeType.Alert:
-        return '🚗';
-      case BadgeType.Notification:
-        return '⚽️';  
-      default:
-        return null;
-  };
-  }
+type IconBadgeProps = {
+  badgeType: BadgeType;
+}
+const IconBadgeContainer: React.FC <IconBadgeProps> = ({badgeType}) => {
   return (
-    <div className='right-panel-container-btn relative'>
+    <div className='right-panel-container-btn relative hover-effect onclick-effect'>
       <div className='red-dot'></div>
-           {renderIcon()}
+          {a[badgeType]}
     </div>
   )
 }

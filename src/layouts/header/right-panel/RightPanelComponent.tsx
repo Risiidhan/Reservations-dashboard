@@ -1,14 +1,14 @@
 import React from 'react';
 import ProfileComponent from './ProfileComponent';
 import IconBadgeContainer from './IconBadgeContainer';
-import { BadgeType } from '@/enum/BadgeType';
+import { BadgeType } from '../../../../types/enum/BadgeType';
 
-const RightPanelComponent = () => {
+const RightPanelComponent : React.FC  = () => {
   return (
     <div className='flex gap-[10px]'>
-      <IconBadgeContainer badgeType={BadgeType.Alert} />
       <IconBadgeContainer badgeType={BadgeType.Notification} />
-      <ProfileComponent>😀</ProfileComponent>
+      <IconBadgeContainer badgeType={BadgeType.Alert} />
+      <ProfileComponent />
     </div>
   )
 }
