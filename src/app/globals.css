@@ -131,3 +131,11 @@
     max-width: 300px;
     min-width: 250px;
 }
+
+.hover-effect {
+  @apply cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out;
+}
+
+.onclick-effect {
+  @apply active:scale-95 transition-all duration-200 ease-in-out;
+}

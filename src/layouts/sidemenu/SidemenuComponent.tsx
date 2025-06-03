@@ -8,47 +8,85 @@ import {
 } from '@/components/ui/collapsible';
 import { Button } from '@/components/ui/button';
 import { ChevronRight } from 'lucide-react';
+import DashboardIconSvg from './svg/DashboardIconSvg';
+import DiningIconSvg from './svg/DiningIconSvg';
 
-const sidebarContent = [
+const sidebarContent: SidebarSection[] = [
   {
     title: 'Overview',
     menu: {
-      title: 'Dashboard',
+        title: 'Dashboard',
+        redirectTo: '/',
+        icon: <DashboardIconSvg />
     },
   },
   {
     title: 'Booking & Reservation',
     menu: {
-      title: 'Dining',
-      submenu: [
-        { title: 'Reservations Overview' },
-        { title: 'Table & Capacity' },
-        { title: 'Floor Plan' },
-        { title: 'Block dates & times' },
-        { title: 'Manage restaurant' },
-
-      ],
+        title: 'Dining',
+        redirectTo: '/',
+        icon: <DiningIconSvg />,
+        submenu: [
+            {
+                title: 'Reservations Overview',
+                redirectTo: '/'
+            },
+            {
+                title: 'Table & Capacity',
+                redirectTo: '/'
+            },
+            {
+                title: 'Floor Plan',
+                redirectTo: '/'
+            },
+            {
+                title: 'Block dates & times',
+                redirectTo: '/'
+            },
+            {
+                title: 'Manage restaurant',
+                redirectTo: '/'
+            },
+        ],
     },
   },
 ];
 
-const renderMenu = (menu: { title: string; submenu?: { title: string }[] }) => {
-  if ('submenu' in menu) {
+
+const renderMenu = (menu: SidebarMenu) => {
+if (!menu.submenu) {
+      return (
+    <Button
+      variant="ghost"
+      className="w-full justify-start text-[15px] font-normal hover:bg-[#EDE7FF]"
+    >
+      <div className="flex items-center gap-2">
+        {menu.icon}
+        {menu.title}
+      </div>
+    </Button>
+  );
+}
     return (
       <Collapsible>
-       <CollapsibleTrigger className='cursor-pointer' asChild>
-        <Button variant="ghost"
-            className="group w-full hover:bg-[#EDE7FF] justify-between text-[15px] font-normal">
-            {menu.title}
+        <CollapsibleTrigger className="cursor-pointer" asChild>
+          <Button
+            variant="ghost"
+            className="group w-full hover:bg-[#EDE7FF] justify-between text-[15px] font-normal"
+          >
+            <div className="flex items-center gap-2">
+              {menu.icon}
+              {menu.title}
+            </div>
             <ChevronRight className="h-4 w-4 transition-transform group-data-[state=open]:rotate-90" />
-        </Button>
+          </Button>
         </CollapsibleTrigger>
         <CollapsibleContent className="pl-4 space-y-1 mt-2">
-          {menu.submenu?.map((subItem, index) => (
+          {menu.submenu.map((subItem, index) => (
             <Button
               key={index}
               variant="ghost"
-              className="w-full justify-start cursor-pointer font-normal capitalize hover:bg-[#EDE7FF] text-[14px]"
+              className="w-full justify-start font-normal text-[14px]"
             >
               {subItem.title}
             </Button>
@@ -56,14 +94,6 @@ const renderMenu = (menu: { title: string; submenu?: { title: string }[] }) => {
         </CollapsibleContent>
       </Collapsible>
     );
-  }
-
-  return (
-    <Button variant="ghost"
-      className="w-full hover:bg-[#EDE7FF] cursor-pointer capitalize justify-start text-[15px] font-normal">
-      {menu.title}
-    </Button>
-  );
 };
 
 
