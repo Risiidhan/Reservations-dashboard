@@ -10,6 +10,7 @@ const ProfileComponent: React.FC = () => {
             src="/image/dummy-profile-img.png"
             alt="profile-pic"
             fill
+            sizes='100%'
             className="object-cover h-full"
             />
     </div>
