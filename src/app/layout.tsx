@@ -29,7 +29,7 @@ export default function RootLayout({
             <HeaderComponent />
             <div className="flex flex-1">
               <SidemenuComponent />
-              <main className="flex-1 w-full p-4">{children}</main>
+              <main className="flex-1 w-full main-content-padding !pt-[30px]">{children}</main>
             </div>
           </div>
         </SidebarProvider>

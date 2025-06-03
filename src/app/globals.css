@@ -81,6 +81,7 @@
  --sidebar-accent-foreground: oklch(0.205 0 0);
  --sidebar-border: oklch(0.922 0 0);
  --sidebar-ring: oklch(0.708 0 0);
+ --header-height: 80px;
 }
 
 .dark {
@@ -132,10 +133,23 @@
     min-width: 250px;
 }
 
+.main-content-padding{
+  padding: 16px 50px;
+}
+
 .hover-effect {
   @apply cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out;
 }
 
 .onclick-effect {
   @apply active:scale-95 transition-all duration-200 ease-in-out;
+}
+
+.header-height {
+  height: var(--header-height);
+}
+
+.sidebar-position{
+  height: calc(100%-var(--header-height));
+  top: var(--header-height);
 }
