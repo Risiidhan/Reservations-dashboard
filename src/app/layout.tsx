@@ -22,14 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+ <html lang="en">
       <body className="antialiased bg-[#F8F9FF]">
         <SidebarProvider>
           <div className="flex flex-col w-full min-h-screen">
             <HeaderComponent />
             <div className="flex flex-1">
               <SidemenuComponent />
-              <main className="flex-1 p-4 overflow-auto">{children}</main>
+              <main className="flex-1 w-full p-4">{children}</main>
             </div>
           </div>
         </SidebarProvider>
@@ -37,3 +37,4 @@ export default function RootLayout({
     </html>
   );
 }
+

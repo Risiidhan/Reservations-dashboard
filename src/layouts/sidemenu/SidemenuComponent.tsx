@@ -10,7 +10,6 @@
   import { ChevronRight } from 'lucide-react';
   import DashboardIconSvg from './svg/DashboardIconSvg';
   import DiningIconSvg from './svg/DiningIconSvg';
-  import SidemenuCollapseIcon from './svg/SidemenuCollapseIcon';
   import { Sidebar, useSidebar } from '@/components/ui/sidebar';
   import "./styles.css"
 
@@ -106,18 +105,11 @@
 
 
   export const SidemenuComponent: React.FC = () => {
-   const { open, setOpen } = useSidebar();
+   const { open } = useSidebar();
 
   return (
-    <div className="sidebar-width relative">
-      <div className="sidebar-toggle"
-        onClick={() => setOpen(!open)} >
-          <div className={`${open? "" : "scale-x-[-1]"} transition-normal duration-300`}>
-        <SidemenuCollapseIcon />
-          </div>
-      </div>
-
-      <Sidebar className={`bg-white h-[calc(100%-70px)] sidebar-width ${open? "w-full" : ""}  top-[70px] border-r border-[#A6B4DA] p-4`}>
+   <div className={`relative transition-all duration-300 ${open ? "sidebar-width" : "w-0"}`}>
+      <Sidebar className={`bg-white h-[calc(100%-70px)] sidebar-width top-[70px] border-r border-[#A6B4DA] p-4`}>
         <nav className="space-y-4 bg-white">
           {sidebarContent.map((item, index) => (
             <div key={index} className="border-b border-[#A6B4DA] pb-4">
