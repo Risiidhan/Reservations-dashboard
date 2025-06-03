@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import HeaderComponent from "@/layouts/header/HeaderComponent";
 import { SidemenuComponent } from "@/layouts/sidemenu/SidemenuComponent";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,16 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en">
-  <body className={`${inter.variable} ${inter.variable} antialiased bg-[#F8F9FF]`}>
-    <div className="flex flex-col min-h-screen">
-      <HeaderComponent />
-      <div className="flex flex-1">
-        <SidemenuComponent />
-        <main className="flex-1 p-4 overflow-auto">{children}</main>
-      </div>
-    </div>
-  </body>
-</html>
+    <html lang="en">
+      <body className="antialiased bg-[#F8F9FF]">
+        <SidebarProvider>
+          <div className="flex flex-col w-full min-h-screen">
+            <HeaderComponent />
+            <div className="flex flex-1">
+              <SidemenuComponent />
+              <main className="flex-1 p-4 overflow-auto">{children}</main>
+            </div>
+          </div>
+        </SidebarProvider>
+      </body>
+    </html>
   );
 }
