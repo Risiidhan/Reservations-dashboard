@@ -1,7 +1,3 @@
-import React from 'react'
-
-const HotelzLogoWithoutText: React.FC = () => {
-  return (
    <svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_714_4109)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.28998 0.138428H40.8739L25.8256 22.1209H19.2451L30.989 4.84795H2.28998V0.138428Z" fill="#222222"/>
@@ -13,8 +9,3 @@ const HotelzLogoWithoutText: React.FC = () => {
 </clipPath>
 </defs>
 </svg>
-
-  )
-}
-
-export default HotelzLogoWithoutText

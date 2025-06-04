@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import QuickStartIconSvg from './svg/QuickStartIconSvg';
-import HelpIconSvg from './svg/HelpIconSvg';
+import SvgIcon from '@/components/SvgIcon';
 
 
 type FooterItem = {
@@ -11,8 +10,8 @@ type FooterItem = {
 };
 
 const footerData: FooterItem[] = [
-  { title: 'Quickstart', icon: <QuickStartIconSvg />, redirectTo: '/' },
-  { title: 'Help', icon: <HelpIconSvg />, redirectTo: '/' },
+  { title: 'Quickstart', icon: <SvgIcon name='quickStartIcon' width={20} height={16}/>, redirectTo: '/' },
+  { title: 'Help', icon: <SvgIcon name='helpIcon' width={20} height={16}  />, redirectTo: '/' },
 ];
 
 const SidebarFooterComponent: React.FC = () => {
@@ -43,7 +42,7 @@ const SidebarFooterComponent: React.FC = () => {
                 <div key={index} className="flex items-center gap-[10px]
                 hover:underline transition-all duration-300 cursor-pointer
                 text-white ">
-                  {item.icon}
+                    <span className='text-[#1A1D49]'>{item.icon}</span>
                   {item.title}
                 </div>
               ))}

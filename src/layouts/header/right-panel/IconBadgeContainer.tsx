@@ -1,11 +1,11 @@
 import { BadgeType } from '../../../../types/enum/BadgeType';
 import React from 'react'
-import NotificationSvg from '../svg/NotificationSvg';
-import AlertSvg from '../svg/AlertSvg';
+import SvgIcon from '@/components/SvgIcon';
 
 const badge = {
-  [BadgeType.Alert]: <AlertSvg />,
-  [BadgeType.Notification]: <NotificationSvg />
+  // [BadgeType.Alert]: <AlertSvg/>,
+  [BadgeType.Alert]: <SvgIcon name={"alert"} width={21} height={21} />,
+  [BadgeType.Notification]: <SvgIcon name={"notification"}  width={21} height={21} />
 }
 
 type IconBadgeProps = {

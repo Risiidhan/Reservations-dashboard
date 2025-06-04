@@ -26,9 +26,11 @@
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/webpack": "^5.28.5",
     "tw-animate-css": "^1.3.3",
     "typescript": "^5"
   }
