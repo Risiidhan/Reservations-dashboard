@@ -1,4 +1,4 @@
-import { BadgeType } from '../../../../types/enum/BadgeType';
+import { BadgeType } from '../../../types/enum/BadgeType';
 import React from 'react'
 import SvgIcon from '@/components/SvgIcon';
 

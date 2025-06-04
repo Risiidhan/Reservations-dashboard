@@ -7,11 +7,11 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { MenuIcon } from 'lucide-react';
-import { renderMenu, sidebarContent } from './content';
 import SidebarFooterComponent from './SidebarFooterComponent';
+import MenuComponent from './MenuComponent';
 
 
-const MobileSidemenuComponent: React.FC = () => {
+const MobileSideMenuComponent: React.FC = () => {
   return (
     <Sheet>
         <SheetTrigger asChild>
@@ -23,14 +23,7 @@ const MobileSidemenuComponent: React.FC = () => {
   <SheetTitle />
 
   <nav className="flex-1 overflow-y-auto space-y-4 bg-white p-4 ">
-    {sidebarContent.map((item: SidebarSection, index: number) => (
-      <div key={index} className="border-b border-[#A6B4DA] pb-4">
-        <p className="text-[15.25px] pl-4 font-bold text-[#53637C] mb-4 uppercase">
-          {item.title}
-        </p>
-        {renderMenu(item.menu)}
-      </div>
-    ))}
+   <MenuComponent />
   </nav>
 
   <SheetFooter className="p-1 pb-0">
@@ -41,4 +34,4 @@ const MobileSidemenuComponent: React.FC = () => {
   );
 };
 
-export default MobileSidemenuComponent;
+export default MobileSideMenuComponent;
