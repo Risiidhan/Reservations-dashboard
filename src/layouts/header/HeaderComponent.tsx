@@ -2,7 +2,6 @@ import HotelzLogo from '@/components/HotelzLogo'
 import React from 'react'
 import RightPanelComponent from './right-panel/RightPanelComponent'
 import CollapseSideMenu from '../sidemenu/CollapseSideMenu'
-import MobileSidemenuComponent from '../sidemenu/MobileSidemenuComponent'
 
 const HeaderComponent : React.FC = () => {
   return (
@@ -13,8 +12,7 @@ const HeaderComponent : React.FC = () => {
       </div>
       <div className='flex w-full flex-1 justify-between items-center main-content-padding'>
         <div>User Company Logo</div>
-        <div className='hidden tablet:flex'><RightPanelComponent /></div>
-        <div className='flex tablet:hidden'><MobileSidemenuComponent /></div>
+        <div><RightPanelComponent /></div>
       </div>
     </div>
   )
