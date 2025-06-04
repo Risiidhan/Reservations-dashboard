@@ -1,4 +1,5 @@
-import SvgIcon from "@/components/SvgIcon";
+import { sidebarContent } from '@/constant/SideMenuContent'
+import React from 'react'
 import { Button } from "@/components/ui/button";
   import {
     Collapsible,
@@ -7,50 +8,9 @@ import { Button } from "@/components/ui/button";
   } from '@/components/ui/collapsible';
 import { ChevronRight } from "lucide-react";
 
-  export const sidebarContent: SidebarSection[] = [
-    {
-      title: 'Overview',
-      menu: {
-          title: 'Dashboard',
-          redirectTo: '/',
-          icon: <SvgIcon name="dashboardIcon" width={20} height={20} className="size-5"/>
-      },
-    },
-    {
-      title: 'Booking & Reservation',
-      menu: {
-          title: 'Dining',
-          redirectTo: '/',
-          icon: <SvgIcon name="diningIcon" width={20} height={20} className="size-5"/>,
-          submenu: [
-              {
-                  title: 'Reservations Overview',
-                  redirectTo: '/'
-              },
-              {
-                  title: 'Table & Capacity',
-                  redirectTo: '/'
-              },
-              {
-                  title: 'Floor Plan',
-                  redirectTo: '/'
-              },
-              {
-                  title: 'Block dates & times',
-                  redirectTo: '/'
-              },
-              {
-                  title: 'Manage restaurant',
-                  redirectTo: '/'
-              },
-          ],
-      },
-    },
-  ];
+const MenuComponent = () => {
 
-  
-
-  export const renderMenu = (menu: SidebarMenu) => {
+    const renderMenu = (menu: SidebarMenu) => {
   if (!menu.submenu) {
         return (
       <Button
@@ -97,3 +57,18 @@ import { ChevronRight } from "lucide-react";
         </Collapsible>
       );
   };
+  return (
+    <>
+   {sidebarContent.map((item, index) => (
+       <div key={index} className="border-b border-[#A6B4DA] pb-4">
+              <p className="text-[15.25px] pl-[16px] font-bold text-[#53637C] mb-4 uppercase">
+                {item.title}
+              </p>
+              {renderMenu(item.menu)}
+            </div>
+          ))}
+          </>
+  )
+}
+
+export default MenuComponent

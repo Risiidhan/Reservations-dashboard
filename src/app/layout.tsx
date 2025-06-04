@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import HeaderComponent from "@/layouts/header/HeaderComponent";
-import { SidemenuComponent } from "@/layouts/sidemenu/SidemenuComponent";
 import { SidebarProvider } from "@/components/ui/sidebar";
+import { SideMenuComponent } from "@/layouts/sidemenu/SideMenuComponent";
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,7 +29,7 @@ export default function RootLayout({
           <div className="flex flex-col w-full min-h-screen">
             <HeaderComponent />
             <div className="flex flex-1">
-              <SidemenuComponent />
+              <SideMenuComponent />
               <main className="flex-1 w-full main-content-padding !pt-[30px]">{children}</main>
             </div>
           </div>
