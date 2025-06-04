@@ -8,8 +8,8 @@ const CollapseSideMenu = () => {
    const { open, setOpen } = useSidebar();
 
   return (
-         <div className="sidebar-toggle"
-        onClick={() => setOpen(!open)} >
+         <div className="sidebar-toggle hover:scale-105 transition-all duration-300"
+            onClick={() => setOpen(!open)} >
           <div className={`${open? "" : "scale-x-[-1]"} transition-normal duration-300`}>
         <SidemenuCollapseIcon />
           </div>

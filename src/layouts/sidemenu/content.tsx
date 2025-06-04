@@ -47,6 +47,66 @@ import { ChevronRight } from "lucide-react";
           ],
       },
     },
+      {
+      title: 'Booking & Reservation',
+      menu: {
+          title: 'Dining',
+          redirectTo: '/',
+          icon: <DiningIconSvg />,
+          submenu: [
+              {
+                  title: 'Reservations Overview',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Table & Capacity',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Floor Plan',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Block dates & times',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Manage restaurant',
+                  redirectTo: '/'
+              },
+          ],
+      },
+    },
+      {
+      title: 'Booking & Reservation',
+      menu: {
+          title: 'Dining',
+          redirectTo: '/',
+          icon: <DiningIconSvg />,
+          submenu: [
+              {
+                  title: 'Reservations Overview',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Table & Capacity',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Floor Plan',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Block dates & times',
+                  redirectTo: '/'
+              },
+              {
+                  title: 'Manage restaurant',
+                  redirectTo: '/'
+              },
+          ],
+      },
+    },
   ];
 
   
