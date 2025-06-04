@@ -4,7 +4,7 @@ import React from 'react'
 import SidemenuCollapseIcon from './svg/SidemenuCollapseIcon'
 import { useSidebar } from '@/components/ui/sidebar';
 
-const CollapseSideMenu = () => {
+const CollapseSideMenu: React.FC = () => {
    const { open, setOpen } = useSidebar();
 
   return (

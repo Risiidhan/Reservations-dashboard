@@ -15,7 +15,7 @@ const footerData: FooterItem[] = [
   { title: 'Help', icon: <HelpIconSvg />, redirectTo: '/' },
 ];
 
-const SidebarFooterComponent = () => {
+const SidebarFooterComponent: React.FC = () => {
   return (
      <div className="w-full bg-[#1A1D49] rounded-t-[20px] p-[24px] flex flex-col gap-[20px]">
            
