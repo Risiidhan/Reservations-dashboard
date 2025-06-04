@@ -3,7 +3,7 @@ import React from 'react'
 import NotificationSvg from '../svg/NotificationSvg';
 import AlertSvg from '../svg/AlertSvg';
 
-const a = {
+const badge = {
   [BadgeType.Alert]: <AlertSvg />,
   [BadgeType.Notification]: <NotificationSvg />
 }
@@ -15,7 +15,7 @@ const IconBadgeContainer: React.FC <IconBadgeProps> = ({badgeType}) => {
   return (
     <div className='right-panel-container-btn relative hover-effect onclick-effect'>
       <div className='red-dot'></div>
-          {a[badgeType]}
+          {badge[badgeType]}
     </div>
   )
 }
