@@ -1,7 +1,3 @@
-import React from 'react'
-
-const HotelzLogo: React.FC  = () => {
-  return (
       <svg width="151" height="47" viewBox="0 0 151 47" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_714_4108)">
         <path fillRule="evenodd" clipRule="evenodd" d="M2.28998 8.13843H40.8739L25.8256 30.1209H19.2451L30.989 12.848H2.28998V8.13843Z" fill="#222222"/>
@@ -14,7 +10,3 @@ const HotelzLogo: React.FC  = () => {
           </clipPath>
         </defs>
       </svg>
-  )
-}
-
-export default HotelzLogo

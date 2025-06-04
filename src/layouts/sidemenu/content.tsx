@@ -1,6 +1,5 @@
+import SvgIcon from "@/components/SvgIcon";
 import { Button } from "@/components/ui/button";
-import DashboardIconSvg from "./svg/DashboardIconSvg";
-import DiningIconSvg from "./svg/DiningIconSvg";
   import {
     Collapsible,
     CollapsibleContent,
@@ -14,7 +13,7 @@ import { ChevronRight } from "lucide-react";
       menu: {
           title: 'Dashboard',
           redirectTo: '/',
-          icon: <DashboardIconSvg />
+          icon: <SvgIcon name="dashboardIcon" width={20} height={20} className="size-5"/>
       },
     },
     {
@@ -22,7 +21,7 @@ import { ChevronRight } from "lucide-react";
       menu: {
           title: 'Dining',
           redirectTo: '/',
-          icon: <DiningIconSvg />,
+          icon: <SvgIcon name="diningIcon" width={20} height={20} className="size-5"/>,
           submenu: [
               {
                   title: 'Reservations Overview',
@@ -71,7 +70,7 @@ import { ChevronRight } from "lucide-react";
               variant="ghost"
               className="group w-full hover:bg-[#EDE7FF] justify-between text-[15px] font-normal"
             >
-              <div className="flex items-center text-[#525D6F] font-medium gap-2">
+              <div className="flex items-center text-[#525D6F] gap-2">
                 {menu.icon}
                 {menu.title}
               </div>
