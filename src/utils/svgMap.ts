@@ -21,7 +21,5 @@ const svgMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 };
 
 export function getSvgIconByName(name: string) {
-    console.log('AlertIcon:', AlertIcon);
-console.log('AlertIcon.default:', AlertIcon?.default);
   return svgMap[name] || null;
 }

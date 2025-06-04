@@ -145,6 +145,23 @@
   @apply active:scale-95 transition-all duration-200 ease-in-out;
 }
 
+.flex-center {
+  @apply flex w-full items-center justify-center
+}
+
+.flex-center-tablet{
+  @apply hidden tablet:flex justify-center items-center
+}
+
+.flex-center-tablet-hidden{
+  @apply flex justify-center items-center tablet:hidden 
+
+}
+
+.smooth-transition {
+  @apply transition-all duration-300
+}
+
 .header-height {
   height: var(--header-height);
 }
@@ -153,6 +170,34 @@
   height: calc(100% - var(--header-height));
   top: var(--header-height);
 }
+
+
+
+.sidebar-footer-container {
+  @apply w-full bg-[#1A1D49] rounded-t-[20px] p-[24px] flex flex-col gap-[20px];
+}
+
+.sidebar-footer-profile-container {
+  @apply flex items-center gap-[8px]
+    px-[6px] py-[12px]
+    border border-[#FFFFFF5E] rounded-[10px]
+    hover:bg-white transition-all duration-300 cursor-pointer ;
+}
+
+.sidebar-footer-profile-image-container {
+  @apply relative rounded-full overflow-hidden h-[40px] w-[40px];
+}
+
+.sidebar-footer-profile-info-container {
+  @apply flex flex-col text-white group-hover/footer:text-[#1A1D49];
+}
+
+.sidebar-footer-menu {
+  @apply flex items-center gap-[10px]
+    hover:underline transition-all duration-300 cursor-pointer
+    text-white;
+}
+
 
 @media only screen and (max-width: 700px) {
   .sidebar-width {
