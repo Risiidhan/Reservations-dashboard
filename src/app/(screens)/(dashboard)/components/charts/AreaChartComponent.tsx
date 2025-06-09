@@ -106,7 +106,8 @@ export function AreaChartComponent() {
                 />
               </linearGradient>
             </defs>
-            <CartesianGrid vertical={false} />
+            <CartesianGrid vertical={true} />
+
             <XAxis
               dataKey="date"
               tickLine={false}

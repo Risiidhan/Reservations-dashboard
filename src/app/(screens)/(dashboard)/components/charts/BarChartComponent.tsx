@@ -1,12 +1,7 @@
 "use client";
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -44,6 +39,30 @@ export function BarChartComponent() {
       <CardContent className="px-0">
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
+            <defs>
+              <linearGradient id="desktopGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#8061DB61" /> {/* Light purple */}
+                <stop offset="100%" stopColor="#8061DBF0" /> {/* Dark purple */}
+              </linearGradient>
+
+              {/* Striped Pattern for Mobile */}
+              <pattern
+                id="mobileStripes"
+                patternUnits="userSpaceOnUse"
+                width="4"
+                height="6"
+              >
+                <line
+                  x1="0"
+                  y="0"
+                  x2="0"
+                  y2="6"
+                  stroke="#c084fc" // Light purple
+                  strokeWidth="1"
+                />
+              </pattern>
+            </defs>
+
             <CartesianGrid vertical={true} />
             <XAxis
               dataKey="month"
@@ -52,19 +71,24 @@ export function BarChartComponent() {
               axisLine={false}
               tickFormatter={(value) => value.slice(0, 3)}
             />
-            <YAxis width={40} tickLine={false} tickMargin={10} axisLine={false} />
+            <YAxis
+              width={40}
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+            />
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-            <ChartLegend content={<ChartLegendContent />} />
+            {/* <ChartLegend content={<ChartLegendContent />} /> */}
             <Bar
               dataKey="desktop"
               stackId="a"
-              fill="var(--color-desktop)"
+              fill="url(#desktopGradient)"
               radius={[0, 0, 4, 4]}
             />
             <Bar
               dataKey="mobile"
               stackId="a"
-              fill="var(--color-mobile)"
+              fill="url(#mobileStripes)"
               radius={[4, 4, 0, 0]}
             />
           </BarChart>

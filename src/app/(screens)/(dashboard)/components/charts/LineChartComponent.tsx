@@ -3,10 +3,7 @@
 import { TrendingUp } from "lucide-react";
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -55,7 +52,8 @@ export function LineChartComponent() {
               right: 12,
             }}
           >
-            <CartesianGrid vertical={false} />
+            <CartesianGrid vertical={true} />
+
             <XAxis
               dataKey="month"
               tickLine={false}
