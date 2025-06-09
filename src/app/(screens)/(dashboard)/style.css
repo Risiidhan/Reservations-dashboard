@@ -1,0 +1,18 @@
+.analytic-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 12px;
+  border-radius: 15px 15px 0 0;
+  border: 1px solid #CFD2D8;
+}
+
+.dashboard-heading{
+  @apply text-[37px] font-[600]
+}
+
+.dashboard-subheading{
+  @apply text-[15px] text-[#6A7392];
+}

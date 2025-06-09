@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
- <html lang="en">
+ <html lang="en" className={inter.className}>
       <body className="antialiased bg-[#F8F9FF]">
         <SidebarProvider>
           <div className="flex flex-col w-full min-h-screen">
