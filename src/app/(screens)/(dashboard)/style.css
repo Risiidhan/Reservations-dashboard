@@ -10,7 +10,7 @@
 }
 
 .dashboard-heading{
-  @apply text-[37px] font-[600]
+  @apply text-[37px] font-[600] 
 }
 
 .dashboard-subheading{

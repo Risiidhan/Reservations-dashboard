@@ -4,8 +4,16 @@ import BarChartComponent from "./charts/BarChartComponent";
 import { AreaChartComponent } from "./charts/AreaChartComponent";
 import { RadialChartComponent } from "./charts/RadialChartComponent";
 import { LineChartComponent } from "./charts/LineChartComponent";
+import { chartType } from "@/types/ChartTypes";
 
-const TimeLineComponent = () => {
+const charts = {
+    barChart: <BarChartComponent />,
+    radialChart: <RadialChartComponent />,
+    areaChart: <AreaChartComponent />,
+    lineChart: <LineChartComponent />
+}
+
+const TimeLineComponent: React.FC = () => {
   return (
     <div className="grid grid-cols-3 border border-[#CFD2D8]">
       <div className="timeline bg-[#CFCFF1]">Days</div>
@@ -17,19 +25,19 @@ const TimeLineComponent = () => {
   );
 };
 
-const ChartComponent = () => {
+const ChartComponent : React.FC<chartType> = ({title, value, subtitle, type}) => {
   return (
     <div className="flex flex-col bg-white rounded-[24px] border border-[#CFD2D8]">
       <div className="header border-b border-[#CFD2D8]">
         <div className="px-[24px] py-[18px] flex justify-between items-center">
           <div className="flex flex-col">
-            <div className="text-[17px] font-[600] leading-[12px]">
-              Reservation Overview
+            <div className="text-[17px] font-[600] leading-[18px] tablet:leading-[12px]">
+             {title}
             </div>
             <div className="text-[26px] font-[700]">
-              9,845{" "}
-              <span className="text-[14px] font-[400] text-[#9291A5]">
-                past 30 days
+              {value}{" "}
+              <span className="text-[14px] block tablet:inline-block font-[400] text-[#9291A5]">
+               {subtitle}
               </span>
             </div>
           </div>
@@ -38,9 +46,9 @@ const ChartComponent = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 px-[24px] py-[18px] gap-0">
+      <div className="flex flex-1 items-center px-[24px] py-[18px] gap-0">
         <div className="flex-1">
-          <LineChartComponent />
+          {charts[type]}
         </div>
       </div>
     </div>

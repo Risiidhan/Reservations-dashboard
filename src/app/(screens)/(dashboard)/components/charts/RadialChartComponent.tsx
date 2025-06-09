@@ -15,6 +15,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const description = "A radial chart with stacked sections";
 
@@ -37,10 +38,12 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function RadialChartComponent() {
-  const totalVisitors =
-    chartData[0].desktop + chartData[0].mobile + chartData[0].tablet;
 
+export function RadialChartComponent() {
+    const totalVisitors =
+    chartData[0].desktop + chartData[0].mobile + chartData[0].tablet;
+    
+    const isMobile = useIsMobile()
   return (
     <Card className="flex flex-col gap-0 shadow-none border-0 p-0">
       <CardContent className="flex items-center p-0">
@@ -49,8 +52,8 @@ export function RadialChartComponent() {
             cy={"80%"}
             data={chartData}
             endAngle={180}
-            innerRadius={150}
-            outerRadius={240}
+            innerRadius={isMobile ? 110 : 180}
+            outerRadius={isMobile ? 140 : 240}
           >
             <ChartTooltip
               cursor={false}
@@ -106,7 +109,7 @@ export function RadialChartComponent() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-4 text-sm">
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex-center gap-3 flex-wrap">
           {(
             Object.entries(chartConfig) as [
               keyof typeof chartConfig,
