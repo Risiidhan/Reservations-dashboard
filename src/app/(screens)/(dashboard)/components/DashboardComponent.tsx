@@ -1,6 +1,7 @@
 import React from "react";
 import QuickAnalyticsContainer from "./QuickAnalyticsContainer";
 import "../style.css"
+import DashboardChartContainerComponent from "./DashboardChartContainerComponent";
 
 const DashboardComponent = () => {
   return (
@@ -15,6 +16,10 @@ const DashboardComponent = () => {
 
       <div className="quick-analytic-row">
         <QuickAnalyticsContainer />
+      </div>
+
+      <div className="chart-row">
+        <DashboardChartContainerComponent />
       </div>
     </div>
   );
