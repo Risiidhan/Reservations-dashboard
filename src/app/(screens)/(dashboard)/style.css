@@ -9,14 +9,6 @@
   border: 1px solid #CFD2D8;
 }
 
-.dashboard-heading{
-  @apply text-[37px] font-[600] 
-}
-
-.dashboard-subheading{
-  @apply text-[15px] text-[#6A7392];
-}
-
 .timeline {
   @apply p-[6px] text-center text-[13px] font-[600];
 }

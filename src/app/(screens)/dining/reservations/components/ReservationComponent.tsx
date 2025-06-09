@@ -1,11 +1,8 @@
-import React from "react";
-import QuickAnalyticsContainer from "./QuickAnalyticsContainer";
-import "../style.css"
-import DashboardChartContainerComponent from "./DashboardChartContainerComponent";
+import React from 'react'
 
-const DashboardComponent = () => {
+const ReservationComponent = () => {
   return (
-    <div className="flex flex-col w-full gap-[40px]">
+     <div className="flex flex-col w-full gap-[40px]">
       <div className="">
         <div className="content-heading leading-[2.5rem] mb-3">Here’s what happening</div>
         <div className="content-subheading">
@@ -15,14 +12,12 @@ const DashboardComponent = () => {
       </div>
 
       <div className="quick-analytic-row">
-        <QuickAnalyticsContainer />
       </div>
 
       <div className="chart-row">
-        <DashboardChartContainerComponent />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DashboardComponent;
+export default ReservationComponent
