@@ -5,7 +5,7 @@ import SvgIcon from "@/components/SvgIcon";
 
 const HeaderComponent: React.FC = () => {
   return (
-    <div className="header-height flex-center bg-white border-b border-[#A6B4DA]">
+    <div className="header-height sticky top-0 flex-center bg-white border-b border-[#A6B4DA]">
       <div className="sidebar-width relative h-full flex-center-tablet border-r border-[#A6B4DA] px-4">
         <SvgIcon name={"hotelLogo"} width={151} height={46} />
         <CollapseSideMenu />
