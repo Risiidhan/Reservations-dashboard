@@ -30,10 +30,12 @@ const DashboardChartContainerComponent = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 laptop:grid-cols-2 gap-4">
+    <div className="@container">
+      <div className="grid grid-cols-1 @3xl:grid-cols-2 gap-4">
         {chartsArr.map((chart: chartType, index: number) => (
-            <ChartComponent key={index} {...chart} />
+          <ChartComponent key={index} {...chart} />
         ))}
+      </div>
     </div>
   );
 };

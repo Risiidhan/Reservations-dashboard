@@ -40,10 +40,12 @@ const AnalyticCardArray: AnalyticCardComponentType[] = [
 ];
 const QuickAnalyticsContainer = () => {
   return (
-    <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
-      {AnalyticCardArray.map((item, index) => (
-        <AnalyticCardComponent key={index} {...item} />
-      ))}
+      <div className="@container">
+        <div className="grid grid-cols-1 @md:grid-cols-2 @4xl:grid-cols-4 gap-4">
+        {AnalyticCardArray.map((item, index) => (
+          <AnalyticCardComponent key={index} {...item} />
+        ))}
+      </div>
     </div>
   );
 };
