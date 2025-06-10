@@ -1,0 +1,13 @@
+
+.sidebar-toggle {
+  border: 1px solid #a6b4da;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+  cursor: pointer;
+}
+
