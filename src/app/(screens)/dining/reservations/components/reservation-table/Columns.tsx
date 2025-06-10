@@ -23,7 +23,6 @@ type Payment = {
 };
 
 export const columns: ColumnDef<Payment>[] = [
- 
   {
     id: "select",
     header: ({ table }) => (
