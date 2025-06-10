@@ -1,0 +1,21 @@
+.right-panel-container-btn{
+  border: 1px solid #D2D7E3;
+  aspect-ratio: 1 / 1;
+  width: 42px;
+  height: auto;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red-dot {
+  border-radius: 9999px;
+  background-color: #FF0000;
+  width: 7px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
