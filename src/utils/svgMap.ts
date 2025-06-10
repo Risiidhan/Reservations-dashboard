@@ -9,6 +9,13 @@ import NotificationIcon from '../../public/image/svg/notification.svg';
 import QuickStartIcon from '../../public/image/svg/quickStartIcon.svg';
 import PlusIcon from '../../public/image/svg/plusIcon.svg';
 import Reservation from '../../public/image/svg/reservation/reservation.svg';
+import Confirmed from '../../public/image/svg/reservation/confirmed.svg';
+import Pending from '../../public/image/svg/reservation/pending.svg';
+import Tables from '../../public/image/svg/reservation/tables.svg';
+import ArrowUp from '../../public/image/svg/reservation/arrowUp.svg';
+import ArrowDown from '../../public/image/svg/reservation/arrowDown.svg';
+
+
 
 const svgMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   alert: AlertIcon?.default || AlertIcon,
@@ -21,7 +28,12 @@ const svgMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   notification: NotificationIcon?.default || NotificationIcon,
   quickStartIcon: QuickStartIcon?.default || QuickStartIcon,
   plusIcon: PlusIcon?.default || PlusIcon,
-  reservation: Reservation?.default || Reservation
+  reservation: Reservation?.default || Reservation,
+  confirmed: Confirmed?.default || Confirmed,
+  pending: Pending?.default || Pending,
+  tables: Tables?.default || Tables,
+  arrowUp: ArrowUp?.default || ArrowUp,
+  arrowDown: ArrowDown?.default || ArrowDown
 };
 
 export function getSvgIconByName(name: string) {

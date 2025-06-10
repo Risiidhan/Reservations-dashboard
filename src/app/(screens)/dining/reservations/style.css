@@ -1,0 +1,33 @@
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-25%);
+  z-index: 10;
+
+  /* Shape & Size */
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%; /* fully rounded */
+  
+  /* Visual Style */
+  background-color: rgba(255, 255, 255, 0.671);
+  color: #000 !important;
+  font-weight: 700;
+  /* Center icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Swiper overrides */
+  --swiper-navigation-size: 16px;
+}
+
+/* Optional: More separation between left/right buttons */
+.swiper-button-next {
+  right: 8px !important;
+}
+
+.swiper-button-prev {
+  left: 8px !important;
+}

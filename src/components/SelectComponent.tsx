@@ -15,7 +15,7 @@ type selectProps = {
 const SelectComponent: React.FC<selectProps> = ({placeholder, valueArr}) => {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-full">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
