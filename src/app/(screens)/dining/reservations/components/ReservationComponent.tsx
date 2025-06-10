@@ -4,6 +4,7 @@ import SvgIcon from "@/components/SvgIcon";
 import FilterSectionComponent from "./FilterSectionComponent";
 import CardContainerComponent from "./CardContainerComponent";
 import SwiperComponent from "./SwiperComponent";
+import ReservationTableComponent from "./reservation-table/ReservationTableComponent";
 
 const ReservationComponent = () => {
   return (
@@ -34,6 +35,10 @@ const ReservationComponent = () => {
 
       <div className="@container time-slots max-w-full overflow-hidden">
         <SwiperComponent />
+      </div>
+
+      <div>
+        <ReservationTableComponent />
       </div>
     </div>
   );
