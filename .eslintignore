@@ -1,0 +1,12 @@
+# .eslintignore
+
+node_modules
+.next
+dist
+out
+public
+coverage
+*.config.js
+*.config.cjs
+*.config.mjs
+*.d.ts
