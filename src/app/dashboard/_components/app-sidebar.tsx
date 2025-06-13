@@ -7,7 +7,7 @@ import {
   SidebarSeparator,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { appConfig } from "@/constants";
+import { appConfig } from "@/constants/config";
 import { FC } from "react";
 import AppSidebarGroup from "./app-sidebar-group";
 
