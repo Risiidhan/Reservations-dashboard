@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Don’t create files (components, pages, styles) that are unused or empty unless it is required if you need to test something create and remove before comitting changes
   - i.e. `style.css` files or empty `page.tsx`
 
-## Commits messages
+## Commit messages
 
 - `feat` – a new feature is introduced with the changes
 - `fix` – a bug fix has occurred
