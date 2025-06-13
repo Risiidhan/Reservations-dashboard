@@ -55,6 +55,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
         - `page.tsx`
         - `layout.tsx` (if needed)
   - `/assets`
+    - `icons` (svg files coming from design and transformed to a React component)
   - `/constants`
     - `config.ts` (app configuration)
     - `index.ts` (general purpose constants)
