@@ -28,8 +28,6 @@ const AppSidebarMenuButton: FC<Props> = ({
       : false;
   const [indicatorHeight, setIndicatorHeight] = useState(0);
 
-  console.log(isRoot, pathname, href, isActive);
-
   useEffect(() => {
     const button = ref.current;
     if (!button) return;
