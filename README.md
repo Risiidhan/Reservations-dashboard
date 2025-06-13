@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+If you don't have `yarn` installed
+
+```bash
+corepack enable
+```
+
 First, install dependencies
 
 ```bash
