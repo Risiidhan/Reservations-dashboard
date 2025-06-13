@@ -16,21 +16,59 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Rules
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Component names always have PascalCase
+- Variable names have camelCase
+- Component file names and component name don’t need to include the word `component`
+  - i.e. `AlertComponent` —> `Alert`
+- Folder and file names are more readable by having names that are lowercase and with dashes
+  - i.e. `/components`, `/assets`, `alert.tsx`, `my-component-name.tsx`
+- Don’t create files (components, pages, styles) that are unused or empty unless it is required if you need to test something create and remove before comitting changes
+  - i.e. `style.css` files or empty `page.tsx`
 
-## Learn More
+## Commits messages
 
-To learn more about Next.js, take a look at the following resources:
+- `feat` – a new feature is introduced with the changes
+- `fix` – a bug fix has occurred
+- `chore` – changes that do not relate to a fix or feature and don't modify src or test files (for example updating dependencies)
+- `refactor` – refactored code that neither fixes a bug nor adds a feature
+- `docs` – updates to documentation such as a the README or other markdown files
+- `style` – changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on.
+- `test` – including new or correcting previous tests
+- `perf` – performance improvements
+- `ci` – continuous integration related
+- `build` – changes that affect the build system or external dependencies
+- `revert` – reverts a previous commit
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Folder structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/src`
+  - `/app` (react pages and related components that are only used within that page)
+    - `layout.tsx` (barebone layout like `html`, `body` elements and assigning fonts)
+    - `not-found.tsx` (add not found page in case an invalid page was pushed)
+    - `/auth` (for later)
+    - `/dashboard` (no need to use route groups here to keep the path structure clear)
+      - `layout.tsx` (dashboard layout including the sidebar etc…)
+      - `/example-child-page`
+        - `/_components` (components used by this page only and not reusable anywhere else)
+        - `page.tsx`
+        - `layout.tsx` (if needed)
+  - `/assets`
+  - `/constants`
+    - `config.ts` (app configuration)
+    - `index.ts` (general purpose constants)
+    - `enums.ts` (add enums here)
+  - `/lib` (external instances of installed libraries)
+    - `axios.ts`
+    - `api.ts` (api calls)
+  - `/utils` (utility functions)
+    - `index.ts` (general purpose or what doesn’t fit any other type like tailwind merge i.e. `cn` function)
+    - `string.ts` (string formatting/manipulation utilities)
+    - `date.ts` (date formatting/manipulation utilities)
+    - etc…
+  - `/types`
+    - `index.ts` (general purpose types)
+    - `auth.ts` (auth types if any)
+    - etc…
+  - `hooks` (react hooks) start with use<HookName>
