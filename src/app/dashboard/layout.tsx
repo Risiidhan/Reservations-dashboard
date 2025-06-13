@@ -1,7 +1,7 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { FC, PropsWithChildren } from "react";
-import AppNavbar from "./_components/app-navbar";
-import AppSidebar from "./_components/app-sidebar";
+import AppNavbar from "./_layout/app-navbar";
+import AppSidebar from "./_layout/app-sidebar";
 
 const LayoutPage: FC<PropsWithChildren> = ({ children }) => {
   return (
