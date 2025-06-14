@@ -1,6 +1,7 @@
 import { FC, ComponentProps } from "react";
 import { StatsCardContainer } from "./_stats/stats-card-container";
 import { ContentBodyComponent } from "@/components/content-body-component";
+import { ChartsContainer } from "./_charts/charts-container";
 
 export const DashboardOverview: FC<ComponentProps<"div">> = ({}) => {
   return (
@@ -11,6 +12,7 @@ export const DashboardOverview: FC<ComponentProps<"div">> = ({}) => {
       }
       className={""}>
       <StatsCardContainer />
+      <ChartsContainer />
     </ContentBodyComponent>
   );
 };
