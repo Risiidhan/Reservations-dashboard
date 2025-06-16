@@ -14,3 +14,11 @@ export type AppSidebarGroupItem = {
   icon: FC;
   sub?: { id: string; title: string; url: string }[];
 };
+
+export type CustomNumberInput = {
+  min: number;
+  max: number;
+  inputClassName?: string;
+  disabled?: boolean;
+  className?: string;
+};
