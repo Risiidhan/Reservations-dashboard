@@ -2,7 +2,6 @@
 
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 
-import { Card, CardContent } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -40,61 +39,52 @@ const chartConfig = {
 
 export function LineChartComponent() {
   return (
-    <Card className="border-0 p-0 shadow-none">
-      <CardContent className="p-0">
-        <ChartContainer config={chartConfig}>
-          <LineChart
-            accessibilityLayer
-            data={chartData}
-            margin={{
-              left: 12,
-              right: 12,
-            }}>
-            <CartesianGrid vertical={true} />
+    <ChartContainer config={chartConfig}>
+      <LineChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: 12,
+          right: 12,
+        }}>
+        <CartesianGrid vertical={true} />
 
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
-            <YAxis
-              width={30}
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-            />
+        <XAxis
+          dataKey="month"
+          tickLine={false}
+          axisLine={false}
+          tickMargin={8}
+          tickFormatter={(value) => value.slice(0, 3)}
+        />
+        <YAxis width={30} tickLine={false} tickMargin={10} axisLine={false} />
 
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
-            />
-            <Line
-              dataKey="desktop"
-              type="linear"
-              stroke="var(--color-desktop)"
-              strokeWidth={2}
-              dot={false}
-            />
-            <Line
-              dataKey="mobile"
-              type="monotone"
-              stroke="var(--color-mobile)"
-              strokeWidth={2}
-              dot={false}
-            />
-            <Line
-              dataKey="tablet"
-              type="monotone"
-              stroke="var(--color-tablet)"
-              strokeWidth={2}
-              dot={false}
-            />
-            <ChartLegend content={<ChartLegendContent />} />
-          </LineChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
+        <ChartTooltip
+          cursor={false}
+          content={<ChartTooltipContent hideLabel />}
+        />
+        <Line
+          dataKey="desktop"
+          type="linear"
+          stroke="var(--color-desktop)"
+          strokeWidth={2}
+          dot={false}
+        />
+        <Line
+          dataKey="mobile"
+          type="monotone"
+          stroke="var(--color-mobile)"
+          strokeWidth={2}
+          dot={false}
+        />
+        <Line
+          dataKey="tablet"
+          type="monotone"
+          stroke="var(--color-tablet)"
+          strokeWidth={2}
+          dot={false}
+        />
+        <ChartLegend content={<ChartLegendContent />} />
+      </LineChart>
+    </ChartContainer>
   );
 }

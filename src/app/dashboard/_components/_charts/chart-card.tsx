@@ -31,7 +31,7 @@ export const ChartCard: FC<ChartsCard> = ({
   className,
 }) => {
   const [activeTab, setActiveTab] = useState(1);
-  const options: string[] = ["Days", "Month", "Year"];
+  const tabs: string[] = ["Days", "Month", "Year"];
 
   return (
     <Card
@@ -46,19 +46,17 @@ export const ChartCard: FC<ChartsCard> = ({
               {title}
             </CardTitle>
             <CardDescription className="flex items-baseline gap-2 text-[26px] leading-[32px] font-[700] text-black">
-              {value}{" "}
+              {value}
               <span className="tablet:inline-block block text-[14px] leading-0 font-[400] text-[#9291A5]">
                 {subtitle}
               </span>
             </CardDescription>
           </div>
-          <div>
-            <TimeLineTab
-              options={options}
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-            />
-          </div>
+          <TimeLineTab
+            tabs={tabs}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
         </div>
       </CardHeader>
 
