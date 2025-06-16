@@ -5,8 +5,9 @@ import { SalesIcon } from "@/assets/icons/sales-icon";
 import { FC, ComponentProps } from "react";
 import { StatsCard } from "./stats-card";
 import { StatCard } from "@/types/ui";
-import { BadgeComponent } from "@/components/ui/badge-component";
 import { StatUpArrowIcon } from "@/assets/icons/stat-up-arrow-icon";
+import { Badge } from "@/components/ui/badge";
+import { StatDownArrowIcon } from "@/assets/icons/stat-down-arrow-icon";
 
 const StatsCardArr: StatCard[] = [
   {
@@ -15,12 +16,12 @@ const StatsCardArr: StatCard[] = [
     icon: <CalenderIcon />,
     footerTitle: "From last month",
     footerIcon: (
-      <BadgeComponent
-        varient={"secondary"}
-        title="16.2%"
-        className="rounded-[12.5px] bg-green-400 px-[8px] py-[1px] font-bold text-[#24875F]"
-        icon={<StatUpArrowIcon />}
-      />
+      <Badge
+        variant={"success"}
+        className={"rounded-[12.5px] px-[8px] py-[1px] font-bold"}>
+        <StatUpArrowIcon />
+        16.2%
+      </Badge>
     ),
     bottomBorder: "#FFDEDC",
     iconColor: "#EEC141",
@@ -31,12 +32,12 @@ const StatsCardArr: StatCard[] = [
     icon: <SalesIcon />,
     footerTitle: "From last month",
     footerIcon: (
-      <BadgeComponent
-        varient={"secondary"}
-        title="16.2%"
-        className="rounded-[12.5px] px-[8px] py-[1px] font-bold text-[#24875F]"
-        icon={<StatUpArrowIcon />}
-      />
+      <Badge
+        variant={"success"}
+        className={"rounded-[12.5px] px-[8px] py-[1px] font-bold"}>
+        <StatUpArrowIcon />
+        16.2%
+      </Badge>
     ),
     bottomBorder: "#E2DCFD",
     iconColor: "#6944E2",
@@ -47,12 +48,12 @@ const StatsCardArr: StatCard[] = [
     icon: <OrderIcon />,
     footerTitle: "From yesterday",
     footerIcon: (
-      <BadgeComponent
-        varient={"destructive"}
-        title="16.2%"
-        className="rounded-[12.5px] px-[8px] py-[1px] font-bold text-white"
-        icon={<StatUpArrowIcon />}
-      />
+      <Badge
+        variant={"success"}
+        className={"rounded-[12.5px] px-[8px] py-[1px] font-bold"}>
+        <StatDownArrowIcon />
+        16.2%
+      </Badge>
     ),
     bottomBorder: "#896DDE",
     iconColor: "#3D85F7",
@@ -63,12 +64,12 @@ const StatsCardArr: StatCard[] = [
     icon: <PendingRequestIcon />,
     footerTitle: "From yesterday",
     footerIcon: (
-      <BadgeComponent
-        varient={"secondary"}
-        title="16.2%"
-        className="rounded-[12.5px] px-[8px] py-[1px] font-bold text-[#24875F]"
-        icon={<StatUpArrowIcon />}
-      />
+      <Badge
+        variant={"destructive"}
+        className={"rounded-[12.5px] px-[8px] py-[1px] font-bold"}>
+        <StatDownArrowIcon />
+        16.2%
+      </Badge>
     ),
     bottomBorder: "#FFD4F8",
     iconColor: "#E5405D",

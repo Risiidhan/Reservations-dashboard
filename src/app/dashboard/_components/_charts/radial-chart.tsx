@@ -132,7 +132,7 @@ export function RadialChartComponent() {
           Showing total visitors for the last 6 months
         </div>
 
-        <div className="flex-center mb-3 flex-wrap gap-3">
+        <div className="mb-3 flex flex-wrap items-center justify-center gap-3">
           {(
             Object.entries(chartConfig) as [
               keyof typeof chartConfig,
@@ -141,10 +141,10 @@ export function RadialChartComponent() {
           ).map(([key, { label, color }]) => (
             <div key={key} className="flex items-center gap-2">
               <span
-                className="h-3 w-3 rounded-full"
+                className="h-2 w-2 rounded-full"
                 style={{ backgroundColor: color }}
               />
-              <span className="text-muted-foreground">{label}</span>
+              <span className="text-[12px]">{label}</span>
             </div>
           ))}
         </div>
