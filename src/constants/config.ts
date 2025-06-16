@@ -1,6 +1,6 @@
 import DashboardIcon from "@/assets/icons/dashboard-icon";
 import ReservationsIcon from "@/assets/icons/reservations-icon";
-import { AppConfig } from "@/types";
+import { AppConfig } from "@/types/config";
 import { BoxIcon } from "lucide-react";
 
 export const appConfig: AppConfig = {
