@@ -5,13 +5,13 @@ import { cn } from "@/utils";
 import { FC } from "react";
 
 export const TimeLineTab: FC<TimeLine> = ({
-  options,
+  tabs,
   activeTab,
   setActiveTab,
 }) => {
   return (
     <div className="grid grid-cols-3 border border-[#CFD2D8]">
-      {options?.map((item: string, index: number) => (
+      {tabs?.map((item: string, index: number) => (
         <div
           onClick={() => setActiveTab(index)}
           key={index}

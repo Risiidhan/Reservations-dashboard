@@ -42,7 +42,7 @@ export type ChartsCard = {
 };
 
 export type TimeLine = {
-  options: string[];
+  tabs: string[];
   activeTab: number;
   setActiveTab: (index: number) => void;
 };

@@ -3,7 +3,7 @@
 import { Customized } from "recharts";
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts";
 
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { CardFooter } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -60,70 +60,68 @@ export function RadialChartComponent() {
   }
 
   return (
-    <Card className="flex flex-col gap-0 border-0 p-0 shadow-none">
-      <CardContent className="flex items-center p-0">
-        <ChartContainer config={chartConfig} className="mx-auto w-full">
-          <RadialBarChart
-            cx="50%"
-            cy="80%"
-            data={chartData}
-            endAngle={180}
-            innerRadius={isMobile ? 120 : 180}
-            outerRadius={isMobile ? 160 : 240}
-            barCategoryGap={1}>
-            <ChartTooltip
-              cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+    <>
+      <ChartContainer config={chartConfig} className="mx-auto w-full">
+        <RadialBarChart
+          cx="50%"
+          cy="80%"
+          data={chartData}
+          endAngle={180}
+          innerRadius={isMobile ? 120 : 180}
+          outerRadius={isMobile ? 160 : 240}
+          barCategoryGap={1}>
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent hideLabel />}
+          />
+          <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
+            <Label
+              content={({ viewBox }) => {
+                if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                  return (
+                    <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle">
+                      <tspan
+                        x={viewBox.cx}
+                        y={(viewBox.cy || 0) - 16}
+                        className="fill-foreground text-[50px] font-bold">
+                        {totalVisitors.toLocaleString()}
+                      </tspan>
+                      <tspan
+                        x={viewBox.cx}
+                        y={(viewBox.cy || 0) + 4}
+                        className="fill-muted-foreground"></tspan>
+                    </text>
+                  );
+                }
+              }}
             />
-            <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
-              <Label
-                content={({ viewBox }) => {
-                  if (viewBox && "cx" in viewBox && "cy" in viewBox) {
-                    return (
-                      <text x={viewBox.cx} y={viewBox.cy} textAnchor="middle">
-                        <tspan
-                          x={viewBox.cx}
-                          y={(viewBox.cy || 0) - 16}
-                          className="fill-foreground text-[50px] font-bold">
-                          {totalVisitors.toLocaleString()}
-                        </tspan>
-                        <tspan
-                          x={viewBox.cx}
-                          y={(viewBox.cy || 0) + 4}
-                          className="fill-muted-foreground"></tspan>
-                      </text>
-                    );
-                  }
-                }}
-              />
-            </PolarRadiusAxis>
-            <Customized component={<DottedArc />} />
+          </PolarRadiusAxis>
+          <Customized component={<DottedArc />} />
 
-            <RadialBar
-              dataKey="desktop"
-              stackId="a"
-              cornerRadius={15}
-              fill="#978FED"
-              className="stroke-transparent stroke-2"
-            />
-            <RadialBar
-              dataKey="mobile"
-              fill="#EE89DF"
-              stackId="a"
-              cornerRadius={15}
-              forceCornerRadius
-              className="stroke-transparent stroke-2"
-            />
-            <RadialBar
-              dataKey="tablet"
-              stackId="a"
-              cornerRadius={15}
-              fill="#FBDE9D"
-              className="stroke-transparent stroke-2"
-            />
-          </RadialBarChart>
-        </ChartContainer>
-      </CardContent>
+          <RadialBar
+            dataKey="desktop"
+            stackId="a"
+            cornerRadius={15}
+            fill="#978FED"
+            className="stroke-transparent stroke-2"
+          />
+          <RadialBar
+            dataKey="mobile"
+            fill="#EE89DF"
+            stackId="a"
+            cornerRadius={15}
+            forceCornerRadius
+            className="stroke-transparent stroke-2"
+          />
+          <RadialBar
+            dataKey="tablet"
+            stackId="a"
+            cornerRadius={15}
+            fill="#FBDE9D"
+            className="stroke-transparent stroke-2"
+          />
+        </RadialBarChart>
+      </ChartContainer>
       <CardFooter className="flex-col gap-4 text-sm">
         <div className="text-[19px] leading-2 font-[600]">
           Food & Beverage Orders
@@ -149,6 +147,6 @@ export function RadialChartComponent() {
           ))}
         </div>
       </CardFooter>
-    </Card>
+    </>
   );
 }

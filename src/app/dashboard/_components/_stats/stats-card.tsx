@@ -35,7 +35,7 @@ export const StatsCard: FC<StatCard> = ({
           </div>
         </CardAction>
       </CardHeader>
-      <CardFooter className="flex justify-between">
+      <CardFooter className="justify-between">
         <div className="text-[13.26px] font-[400]">{footerTitle}</div>
         <div>{footerIcon}</div>
       </CardFooter>
