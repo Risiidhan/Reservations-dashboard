@@ -21,10 +21,10 @@ export const StatsCard: FC<StatCard> = ({
   return (
     <Card
       style={{ borderBottom: `4px solid ${bottomBorder}` }}
-      className="rounded-b-none">
+      className="rounded-b-none border-[#CFD2D8] shadow-none">
       <CardHeader>
         <CardTitle className="text-[15px] font-[400]">{heading}</CardTitle>
-        <CardDescription className="text-[42px] leading-10 font-semibold text-black">
+        <CardDescription className="text-[35px] leading-10 font-semibold text-black xl:text-[42px]">
           {value}
         </CardDescription>
         <CardAction>
