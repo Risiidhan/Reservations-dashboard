@@ -13,7 +13,7 @@ import AppSidebarGroup from "./app-sidebar-group";
 
 const AppSidebar: FC = () => {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" className="sticky top-0 z-20">
       <SidebarHeader className="relative">
         <SidebarLogo>
           <appConfig.icon size={30} />
