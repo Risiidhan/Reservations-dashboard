@@ -1,11 +1,11 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
 import { FC, PropsWithChildren } from "react";
 import AppNavbar from "./_layout/app-navbar";
 import AppSidebar from "./_layout/app-sidebar";
+import ClientProviders from "./_providers/client-providers";
 
 const LayoutPage: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <SidebarProvider>
+    <ClientProviders>
       <AppSidebar />
 
       <div className="w-full">
@@ -15,7 +15,7 @@ const LayoutPage: FC<PropsWithChildren> = ({ children }) => {
           {children}
         </div>
       </div>
-    </SidebarProvider>
+    </ClientProviders>
   );
 };
 
