@@ -1,21 +1,23 @@
 import {
-  Header,
-  HeaderSubtitle,
-  HeaderTitle,
+  DashboardHeader,
+  DashboardHeaderSubtitle,
+  DashboardHeaderTitle,
 } from "@/components/dashboard-header";
-import { DashboardOverview } from "./_components/dashboard-overview";
+import { ChartsContainer } from "./_components/_charts/charts";
+import { StatCards } from "./_components/_stats/stat-cards";
 
 const Page = () => {
   return (
     <>
-      <Header>
-        <HeaderTitle>Here’s what happening</HeaderTitle>
-        <HeaderSubtitle>
+      <DashboardHeader>
+        <DashboardHeaderTitle>Here’s what happening</DashboardHeaderTitle>
+        <DashboardHeaderSubtitle>
           Good morning, Marice! Here&apos;s a delightful insight of your
           Dashboard today.
-        </HeaderSubtitle>
-      </Header>
-      <DashboardOverview />
+        </DashboardHeaderSubtitle>
+      </DashboardHeader>
+      <StatCards />
+      <ChartsContainer />
     </>
   );
 };

@@ -33,7 +33,10 @@ export const OrderIcon: FC<SVGProps<SVGSVGElement>> = ({ ...rest }) => {
         />
       </mask>
       <g mask="url(#mask0_63_22857)">
-        <path d="M0 6.10352e-05H22V22.0001H0V6.10352e-05Z" fill="#3D85F7" />
+        <path
+          d="M0 6.10352e-05H22V22.0001H0V6.10352e-05Z"
+          fill="currentColor"
+        />
       </g>
     </svg>
   );

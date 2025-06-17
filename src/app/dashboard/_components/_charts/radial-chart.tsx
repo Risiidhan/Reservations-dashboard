@@ -69,6 +69,7 @@ export function RadialChartComponent() {
           endAngle={180}
           innerRadius={isMobile ? 120 : 140}
           outerRadius={isMobile ? 160 : 200}
+          barSize={25}
           barCategoryGap={1}>
           <ChartTooltip
             cursor={false}
@@ -83,7 +84,7 @@ export function RadialChartComponent() {
                       <tspan
                         x={viewBox.cx}
                         y={(viewBox.cy || 0) - 16}
-                        className="fill-foreground text-[50px] font-bold">
+                        className="fill-foreground text-5xl font-bold">
                         {totalVisitors.toLocaleString()}
                       </tspan>
                       <tspan
@@ -123,7 +124,7 @@ export function RadialChartComponent() {
         </RadialBarChart>
       </ChartContainer>
       <CardFooter className="flex-col gap-4 text-sm">
-        <div className="text-[19px] leading-2 font-[600]">
+        <div className="text-lg leading-2 font-semibold">
           Food & Beverage Orders
         </div>
         <div className="text-center leading-none text-muted-foreground">
@@ -142,7 +143,7 @@ export function RadialChartComponent() {
                 className="h-2 w-2 rounded-full"
                 style={{ backgroundColor: color }}
               />
-              <span className="text-[12px]">{label}</span>
+              <span className="text-xs">{label}</span>
             </div>
           ))}
         </div>

@@ -36,18 +36,18 @@ export const ChartCard: FC<ChartsCard> = ({
   return (
     <Card
       className={cn(
-        "rounded-[24px] border border-[#CFD2D8] bg-white shadow-none",
+        "rounded-3xl border border-[#CFD2D8] bg-white shadow-none",
         className,
       )}>
-      <CardHeader className="px-[24px] py-[18px]">
+      <CardHeader className="px-6 py-4">
         <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
-          <div className="flex flex-col">
-            <CardTitle className="tablet:leading-[12px] text-[17px] leading-[18px] font-[600]">
+          <div className="flex flex-col gap-1">
+            <CardTitle className="text-lg leading-4 font-semibold md:leading-3">
               {title}
             </CardTitle>
-            <CardDescription className="flex items-baseline gap-2 text-[26px] leading-[32px] font-[700] text-black">
+            <CardDescription className="flex items-baseline gap-2 text-2xl leading-8 font-bold text-black">
               {value}
-              <span className="tablet:inline-block block text-[14px] leading-0 font-[400] text-[#9291A5]">
+              <span className="block text-sm leading-0 font-normal text-[#9291A5] md:inline-block">
                 {subtitle}
               </span>
             </CardDescription>
@@ -60,7 +60,7 @@ export const ChartCard: FC<ChartsCard> = ({
         </div>
       </CardHeader>
 
-      <CardContent className="flex h-full items-center px-[24px] py-[18px]">
+      <CardContent className="flex h-full items-center px-6 py-4">
         <div className="flex-1 items-center">{chartMap[chart]}</div>
       </CardContent>
     </Card>

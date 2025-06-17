@@ -19,7 +19,7 @@ export const TimeLineTab: FC<TimeLine> = ({
             WebkitTapHighlightColor: "transparent",
           }}
           className={cn(
-            "flex flex-1 cursor-pointer justify-center border-[#CFD2D8] p-[8px] text-center text-[13px] font-[600] transition-all duration-300 hover:bg-[#CFCFF1]",
+            "flex flex-1 cursor-pointer justify-center border-[#CFD2D8] p-2 text-center text-sm font-semibold transition-all duration-300 hover:bg-[#CFCFF1]",
             index !== 0 && "border-l",
             activeTab === index ? "bg-[#CFCFF1]" : "bg-[#fafcff]",
           )}>

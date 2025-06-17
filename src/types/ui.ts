@@ -1,4 +1,6 @@
+import { badgeVariants } from "@/components/ui/badge";
 import { ChartType } from "@/constants/enums";
+import { VariantProps } from "class-variance-authority";
 import { FC, ReactNode } from "react";
 
 export type AppSidebarGroup = {
@@ -16,14 +18,24 @@ export type AppSidebarGroupItem = {
   sub?: { id: string; title: string; url: string }[];
 };
 
-export type StatCard = {
-  heading: string;
-  value: string;
-  icon: ReactNode;
-  footerTitle: string;
-  footerIcon: ReactNode;
-  bottomBorder: string;
-  iconColor: string;
+export type StatProps = {
+  header: {
+    title: string;
+    value: string;
+    icon: ReactNode;
+  };
+  footer: {
+    title: string;
+    badge: {
+      icon: ReactNode;
+      value: string;
+      iconVarient: VariantProps<typeof badgeVariants>["variant"];
+    };
+  };
+  styles: {
+    border: string;
+    iconColor: string;
+  };
 };
 
 export type ContentBodyType = {
