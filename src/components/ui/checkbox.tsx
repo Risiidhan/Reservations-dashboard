@@ -21,8 +21,7 @@ const checkboxVariants = cva(
 
         success:
           "border-success-foreground data-[state=checked]:border-success-foreground  data-[state=checked]:text-success-foreground data-[state=checked]:bg-success",
-        pending:
-          "border-pending-foreground data-[state=checked]:border-pending-foreground  data-[state=checked]:text-pending-foreground data-[state=checked]:bg-pending",
+        warn: "border-warn-foreground data-[state=checked]:border-warn-foreground  data-[state=checked]:text-warn-foreground data-[state=checked]:bg-warn",
       },
       size: {
         sm: "w-3 h-3",

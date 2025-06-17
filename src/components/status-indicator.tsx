@@ -9,7 +9,7 @@ const statusVariants = cva("rounded-full aspect-square w-3 h-auto", {
       primary: "bg-primary",
       destructive: "bg-destructive-foreground ",
       success: "bg-success-foreground ",
-      pending: "bg-pending-foreground ",
+      warn: "bg-warn-foreground ",
     },
   },
   defaultVariants: {

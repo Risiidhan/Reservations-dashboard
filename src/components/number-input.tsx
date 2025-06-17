@@ -44,18 +44,20 @@ export const NumberInput: FC<CustomNumberInput> = ({
         "flex w-fit overflow-hidden rounded-[6px] border border-[#E5E7EB]",
         className,
       )}>
-      <div
+      <button
+        type="button"
         onClick={decreament}
         className="group flex cursor-pointer items-center justify-center bg-[#F3F4F6] p-3 select-none hover:bg-[#dfdfdf]">
         <div
           className={`transition-transform ${!disabled ? "group-active:scale-90" : ""}`}>
           <MinusIcon />
         </div>
-      </div>
+      </button>
       <input
         disabled={disabled}
-        type="number"
+        inputMode="numeric"
         value={value}
+        pattern="[0-9]*"
         onChange={handleChange}
         className={cn(
           "border-x border-[#E5E7EB] bg-white text-center select-none focus-visible:outline-0",
@@ -63,7 +65,8 @@ export const NumberInput: FC<CustomNumberInput> = ({
           inputClassName,
         )}
       />
-      <div
+      <button
+        type="button"
         onClick={increament}
         className={cn(
           "group flex cursor-pointer items-center justify-center bg-[#F3F4F6] p-3 select-none hover:bg-[#dfdfdf]",
@@ -73,7 +76,7 @@ export const NumberInput: FC<CustomNumberInput> = ({
           className={`transition-transform ${!disabled ? "group-active:scale-90" : ""}`}>
           <PlusIcon />
         </div>
-      </div>
+      </button>
     </div>
   );
 };

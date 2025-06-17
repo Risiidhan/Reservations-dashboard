@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { FC, ReactNode } from "react";
 
 const statusVariant = cva(
-  "flex flex-col items-center justify-center rounded-[12px] gap-[4px] p-4",
+  "flex flex-col items-center justify-center rounded-xl gap-1 p-4",
   {
     variants: {
       variant: {
@@ -13,8 +13,7 @@ const statusVariant = cva(
           "bg-destructive-secondary text-destructive-foreground border border-destructive",
         success:
           "bg-success-secondary text-success-foreground border border-success",
-        pending:
-          "bg-pending-secondary text-pending-foreground border border-pending",
+        warn: "bg-warn-secondary text-warn-foreground border border-warn",
       },
     },
     defaultVariants: {
