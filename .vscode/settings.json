@@ -10,5 +10,8 @@
     "source.fixAll.eslint": "explicit"
   },
   "files.eol": "\n",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

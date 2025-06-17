@@ -12,7 +12,9 @@ const LayoutPage: FC<PropsWithChildren> = ({ children }) => {
         <AppNavbar />
 
         <div className="min-h-[calc(100svh_-_4rem)] bg-sidebar-content p-4 sm:p-12">
-          {children}
+          <div className="mx-auto flex max-w-7xl flex-col gap-[20px]">
+            {children}
+          </div>
         </div>
       </div>
     </ClientProviders>
