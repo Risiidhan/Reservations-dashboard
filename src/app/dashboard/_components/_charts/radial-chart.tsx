@@ -43,7 +43,7 @@ export function RadialChartComponent() {
     const { width = 0, height = 0 } = props;
     const cx = width / 2;
     const cy = height * 0.8;
-    const radius = isMobile ? 100 : 150;
+    const radius = isMobile ? 100 : 110;
     const dots = 10;
     const angleStep = 180 / dots;
 
@@ -67,8 +67,8 @@ export function RadialChartComponent() {
           cy="80%"
           data={chartData}
           endAngle={180}
-          innerRadius={isMobile ? 120 : 180}
-          outerRadius={isMobile ? 160 : 240}
+          innerRadius={isMobile ? 120 : 140}
+          outerRadius={isMobile ? 160 : 200}
           barCategoryGap={1}>
           <ChartTooltip
             cursor={false}
