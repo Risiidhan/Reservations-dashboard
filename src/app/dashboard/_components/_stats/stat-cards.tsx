@@ -87,9 +87,9 @@ const cards: StatProps[] = [
   },
 ];
 
-export const StatCards: FC<ComponentProps<"div">> = ({}) => {
+export const StatCards: FC<ComponentProps<"div">> = ({ ...rest }) => {
   return (
-    <div className="@container">
+    <div className="@container" {...rest}>
       <div className="grid grid-cols-1 gap-4 @md:grid-cols-2 @4xl:grid-cols-4">
         {cards.map((item, index) => (
           <StatCard key={index} {...item} />

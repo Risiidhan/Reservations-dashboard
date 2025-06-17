@@ -30,9 +30,9 @@ const chartsArr: ChartsCard[] = [
   },
 ];
 
-export const ChartsContainer: FC<ComponentProps<"div">> = ({}) => {
+export const ChartsContainer: FC<ComponentProps<"div">> = ({ ...rest }) => {
   return (
-    <div className="@container">
+    <div className="@container" {...rest}>
       <div className="grid grid-cols-1 gap-4 @3xl:grid-cols-2">
         {chartsArr.map((chart: ChartsCard, index: number) => (
           <ChartCard key={index} {...chart} />

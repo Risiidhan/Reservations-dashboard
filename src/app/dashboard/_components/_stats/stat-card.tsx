@@ -26,33 +26,31 @@ export const FooterBadge: FC<StatProps["footer"]["badge"]> = ({
 export const StatCard: FC<StatProps> = ({ header, footer, styles }) => {
   return (
     <Card
-      style={{ borderBottom: `4px solid ${styles?.border}` }}
+      style={{ borderBottom: `4px solid ${styles.border}` }}
       className="@container rounded-b-none border-[#CFD2D8] shadow-none">
       <CardHeader className="flex-1">
-        <CardTitle className="text-md font-normal">{header?.title}</CardTitle>
+        <CardTitle className="text-md font-normal">{header.title}</CardTitle>
         <CardDescription className="text-3xl leading-10 font-semibold text-black 2xl:text-4xl">
-          {header?.value}
+          {header.value}
         </CardDescription>
         <CardAction>
           <div
             style={{
-              color: styles?.iconColor,
-              border: `1px solid ${styles?.iconColor}`,
+              color: styles.iconColor,
+              border: `1px solid ${styles.iconColor}`,
             }}
             className="flex aspect-square h-auto w-10 items-center justify-center rounded-sm">
-            {header?.icon}
+            {header.icon}
           </div>
         </CardAction>
       </CardHeader>
       <CardFooter className="justify-between">
-        <div className="text-sm font-normal">{footer?.title}</div>
-        <div>
-          <FooterBadge
-            icon={footer?.badge?.icon}
-            value={footer?.badge?.value}
-            iconVarient={footer?.badge?.iconVarient}
-          />
-        </div>
+        <div className="text-sm font-normal">{footer.title}</div>
+        <FooterBadge
+          icon={footer.badge.icon}
+          value={footer.badge.value}
+          iconVarient={footer.badge.iconVarient}
+        />
       </CardFooter>
     </Card>
   );
